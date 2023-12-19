@@ -1,0 +1,142 @@
+.hd_top {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background: white;
+    padding: 15px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.hd_header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .hd_logo {
+        padding-right: 15px;
+        cursor: pointer;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .hd_links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+
+        a {
+            color: #6b6b6b;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: Poppins;
+
+            &:hover {
+                color: black;
+            }
+
+            &.active {
+                color: black;
+            }
+
+            &:not(:last-child) {
+                border-right: 1px solid gray;
+            }
+        }
+    }
+
+    .hd_actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .hd_lang {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            cursor: pointer;
+            color: rgb(27, 198, 255);
+            font-weight: bold;
+
+            span {
+                line-height: 0;
+                font-size: 26px;
+                color: #6b6b6b;
+            }
+        }
+
+        .btn {
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            border: 2px solid currentColor;
+            font-weight: 500;
+            color: currentColor;
+            font-size: 15px;
+        }
+
+        .hd_login {
+            color: dodgerblue;
+
+            &:hover {
+                background-color: dodgerblue;
+                color: white;
+                border-color: dodgerblue;
+            }
+        }
+
+        .hd_connect {
+            color: rgb(2, 153, 70);
+
+            &:hover {
+                background-color: rgb(2, 153, 70);
+                color: white;
+                border-color: rgb(2, 153, 70);
+            }
+        }
+    }
+
+    @media(max-width:992px) {
+        .hd_logo img {
+            width: 120px;
+        }
+
+        .hd_links {
+            a {
+                &:not(:last-child) {
+                    border-right: none;
+                }
+            }
+        }
+
+        .hd_actions {
+            gap: 5px;
+
+            .btn {
+                padding: 4px 10px;
+                font-size: 12px;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    @media(max-width:768px) {
+        & {
+            padding: 0 12px;
+        }
+
+        .hd_logo img {
+            width: 100px;
+        }
+
+        .hd_links,
+        .hd_actions {
+            display: none;
+        }
+    }
+}

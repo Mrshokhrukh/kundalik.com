@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;700;900&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+:root {
+  --vl-color-1: #747bff;
+  --vl-color-2: #646cff;
+  --vl-color-3: #535bf2;
+}
+
+body {
+  font-family: Roboto;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.max_container {
+  max-width: 1440px;
+  margin: auto;
+
+}
+
+@media(max-width:1440px) {
+  .max_container {
+    max-width: 1390px;
+  }
+}
+
+@media(max-width:1390px) {
+  .max_container {
+    max-width: 1201px;
+  }
+}
+
+@media(max-width:1201px) {
+  .max_container {
+    max-width: 992px;
+  }
+}
+
+@media(max-width:992px) {
+  .max_container {
+    max-width: 90%;
+  }
+}
+
+@media(max-width:768px) {
+  .max_container {
+    max-width: 94%;
+  }
+}
+
+@media(max-width:512px) {
+  .max_container {
+    max-width: 100%;
+  }
+}
